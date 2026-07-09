@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="build-tag" content="SWC260708-v4-260709">
+<meta name="build-tag" content="SWC260708-v5-260709">
 <meta name="description" content="Access and contact information — Suita Campus, The University of Osaka.">
 <title>Access & Contact | Laboratory of Functional Genomics for Human Evolution | Graduate School of Frontier Biosciences, The University of Osaka</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -318,7 +318,8 @@ ovl.addEventListener('click',cm);
 document.querySelectorAll('.hdr-nav a').forEach(a=>a.addEventListener('click',cm));
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-console.log('BUILD_TAG: SWC260708-v4-260709');
+addEventListener('load',()=>setTimeout(()=>document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible')),250));
+console.log('BUILD_TAG: SWC260708-v5-260709');
 </script>
 </body>
 </html>

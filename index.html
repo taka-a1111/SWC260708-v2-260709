@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="build-tag" content="SWC260708-v4-260709">
+<meta name="build-tag" content="SWC260708-v5-260709">
 <meta name="description" content="Laboratory of Functional Genomics for Human Evolution — investigating the origins of human uniqueness. Graduate School of Frontier Biosciences, The University of Osaka.">
 <title>Home | Laboratory of Functional Genomics for Human Evolution | Graduate School of Frontier Biosciences, The University of Osaka</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,8 +65,8 @@ body.menu-open .nav-ovl{opacity:1;visibility:visible}
 /* ---- HERO (home) ---- */
 /* main image: image only, no overlay / no text, ~1/3 height */
 .hero{position:relative;padding-top:116px;background:#fff;overflow:hidden}
-.hero-media{height:34vh;min-height:250px;max-height:380px}
-.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 34%}
+.hero-media{display:flex;justify-content:center;align-items:center;padding:8px 28px 0}
+.hero-media img{width:auto;max-width:100%;height:auto;max-height:340px;object-fit:contain}
 /* intro under main image: Prof. photo + text */
 .intro-grid{display:flex;gap:44px;align-items:center}
 .intro-ph{width:190px;height:190px;border-radius:14px;object-fit:cover;flex-shrink:0;box-shadow:0 16px 40px rgba(0,62,65,.14)}
@@ -224,7 +224,8 @@ footer{background:var(--teal-dd);color:rgba(255,255,255,.82);padding:62px 0 30px
   .hdr-nav a:last-child{border-right:0}
   .wrap{padding:0 20px}
   .hero{padding-top:60px}
-  .hero-media{height:26vh;min-height:180px}
+  .hero-media{padding:6px 16px 0}
+  .hero-media img{max-height:none;width:100%}
   .intro-grid{flex-direction:column;text-align:center;gap:24px}
   .intro-ph{width:150px;height:150px}
   .phero{padding:130px 0 50px}
@@ -333,7 +334,8 @@ ovl.addEventListener('click',cm);
 document.querySelectorAll('.hdr-nav a').forEach(a=>a.addEventListener('click',cm));
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-console.log('BUILD_TAG: SWC260708-v4-260709');
+addEventListener('load',()=>setTimeout(()=>document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible')),250));
+console.log('BUILD_TAG: SWC260708-v5-260709');
 </script>
 </body>
 </html>
