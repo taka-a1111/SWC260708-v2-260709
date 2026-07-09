@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="build-tag" content="SWC260708-v3-260709">
+<meta name="build-tag" content="SWC260708-v4-260709">
 <meta name="description" content="Our research integrates evolutionary genomics and stem cell technology to decode human uniqueness.">
 <title>Research | Laboratory of Functional Genomics for Human Evolution | Graduate School of Frontier Biosciences, The University of Osaka</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +37,7 @@ img{max-width:100%;display:block}
 .brand-txt .lab{font-family:'Fraunces',serif;font-size:16px;font-weight:600;color:var(--ink);letter-spacing:-.01em;line-height:1.25}
 .brand-txt .sch{font-size:11.5px;color:var(--muted);letter-spacing:.01em;margin-top:2px}
 .hdr-nav{background:var(--teal)}
-.hdr-nav-in{max-width:var(--maxw);margin:0 auto;padding:0;display:flex;align-items:stretch}
+.hdr-nav-in{max-width:none;margin:0;padding:0;display:flex;align-items:stretch}
 .hdr-nav a{flex:1;text-align:center;padding:15px 10px;font-size:13.5px;font-weight:500;color:rgba(255,255,255,.92);
   letter-spacing:.01em;transition:background .2s,color .2s;white-space:nowrap;border-left:1px solid rgba(255,255,255,.16)}
 .hdr-nav a:last-child{border-right:1px solid rgba(255,255,255,.16)}
@@ -332,7 +332,7 @@ ovl.addEventListener('click',cm);
 document.querySelectorAll('.hdr-nav a').forEach(a=>a.addEventListener('click',cm));
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-console.log('BUILD_TAG: SWC260708-v3-260709');
+console.log('BUILD_TAG: SWC260708-v4-260709');
 </script>
 </body>
 </html>
